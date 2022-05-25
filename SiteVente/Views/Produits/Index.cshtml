@@ -1,0 +1,39 @@
+﻿<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Nom
+			</th>
+			<th>
+				Marque
+			</th>
+			<th>
+				Quantite
+			</th>
+			<th>
+				Modifier
+			</th>
+			<th>
+				Supprimer
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(Produit p in Model)
+		{
+			<tr>
+				<td>
+					@p.Nom
+				</td>
+				<td>
+					@p.Marque
+				</td>
+				<td>
+					@p.Quantite
+				</td>
+				<td><a class="btn btn-primary" asp-action="Edit" asp-route-id="@p.Nom">Modifier</a></td>
+				<td><a class="btn btn-danger" asp-action="Delete" asp-route-id="@p.Nom">Delete</a></td>
+		</tr>
+		}
+	</tbody>
+</table>

@@ -1,0 +1,21 @@
+﻿@model Client
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="Nom"> Nom</label>
+        <input asp-for="Nom" class="form-control form-control-sm" placeholder="Ecrire le nom" readonly />
+    </div>
+    <div class="form-group">
+        <label class="form-control form-control-sm" asp-for="TypeClient"> Type du CLient</label>
+        <select class="form-control form-control-sm" asp-for="TypeClient">
+            <option value="0">Pofessionnel</option>
+            <option value="1">Particulier</option>
+        </select>
+       
+    </div>
+    <div class="form-group">
+        <label asp-for="Adresse"> Adresse</label>
+        <input asp-for="Adresse" class="form-control form-control-sm" />
+    </div>
+    <button class="form-control btn btn-primary" type="submit">Modifier</button>
+</form>

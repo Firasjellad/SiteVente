@@ -1,0 +1,17 @@
+﻿@model Produit
+<form asp-action="Edit" method="post">
+	<div asp-validation-summary="All"></div>
+	<div class="form-group">
+		<label asp-for="Nom"> Nom</label> 
+		<input asp-for="Nom" class="form-control form-control-sm" placeholder="Ecrire le nom" readonly />
+	</div>
+	<div class="form-group">
+		<label asp-for="Quantite"> Quantite</label> 
+		<input asp-for="Quantite" class="form-control form-control-sm" />
+	</div>
+	<div class="form-group">
+		<label asp-for="Marque"> Marque</label> 
+		<input asp-for="Marque" class="form-control form-control-sm" />
+	</div>
+	<button class="form-control btn btn-primary" type="submit">Modifier</button>
+</form>
